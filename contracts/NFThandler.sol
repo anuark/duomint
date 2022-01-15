@@ -11,6 +11,7 @@ import '@openzeppelin/contracts/utils/Counters.sol';
 contract NFThandler is ReentrancyGuard {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
+  address owner;
 
   constructor() {
     owner = msg.sender;
