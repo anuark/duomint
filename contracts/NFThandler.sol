@@ -6,6 +6,8 @@ import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
 import '@openzeppelin/contracts/utils/Counters.sol';
 
+// lookup user's NFT with MetaMask account
+
 contract NFThandler is ReentrancyGuard {
   using Counters for Counters.Counter;
 
