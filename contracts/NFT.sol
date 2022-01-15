@@ -8,18 +8,15 @@ contract NFT is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    address contractAddress;
+    constructor() ERC721('DuoMint', 'DMT') {}
 
-    constructor(address handlerAddress) ERC721('DuoMint', 'DMT') {
-      contractAddress = handlerAddress;
-    }
-
-    function mintToken(string memory tokenURI) public returns(uint id) {
+    function mintToken(address receiver, string memory tokenURI) public returns(uint id) {
       _tokenIds.increment();
+
       uint newItemId = _tokenIds.current();
-      _mint(msg.sender, newItemId);
+      _mint(receiver, newItemId);
       _setTokenURI(newItemId, tokenURI);
-      setApprovalForAll(contractAddress, true);
+
       id = newItemId;
     }
 }
