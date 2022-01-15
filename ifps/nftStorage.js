@@ -13,6 +13,7 @@ const metadata = await client.store({
 })
 console.log(metadata.url)
 // ipfs://bafyreib4pff766vhpbxbhjbqqnsh5emeznvujayjj4z2iu533cprgbz23m/metadata.json
+// https://ipfs.io/ipfs/bafybeigshjvxylte7ujmymcgypyqrhm6fxugiuwt5krgrvctvmvvb6nrnu
 }
 
 main ();

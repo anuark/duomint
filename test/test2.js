@@ -13,7 +13,7 @@ describe("DuoMint", function () {
     console.log(nft2.address);
 
     const passengers = ['0x9992847Cb19492673457f7f088Eb2d102F98aeCC', '0xe4D9621321e77B499392801d08Ed68Ec5175f204', '0x147d71E7Bcb0eA2219B2921F7F921E9f6c0e564a'] 
-    const pilotTokenURI = 'https-ipfs-t1'
+    const pilotTokenURI = 'https://ipfs.io/ipfs/bafybeigshjvxylte7ujmymcgypyqrhm6fxugiuwt5krgrvctvmvvb6nrnu'
     const passengerTokenURI = 'https-ipfs-t2'
 
     // test minting
