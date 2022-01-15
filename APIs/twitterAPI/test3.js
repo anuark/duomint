@@ -17,8 +17,6 @@ async function main () {
     const lastTweet = tweets.data[0]
 
     const lastTweetText = tweets.data[0].text   // It should match the tweet that we asked the user to copy and paste! 
-
-    console.log(lastTweetText)
 }
 
 main ()

@@ -2,14 +2,14 @@ require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 
 module.exports = {
-  defaultNetwork: 'rinkeby',
+  // defaultNetwork: 'rinkeby',
   networks: {
-    hardhat: {
-      chainId: 1337
-    },
+    // hardhat: {
+    //   chainId: 1337
+    // },
     rinkeby: {
       url: `${process.env.ALCHEMY_RINK_NODE}`,
-      accounts: [`0x${process.env.METAMASK_PRI_KEY}`]
+      accounts: [`0x${process.env.METAMASK_PRI_KEY}`],
     }
   },
     solidity: {

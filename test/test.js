@@ -7,16 +7,19 @@ describe("DuoMint", function () {
   it("Should mint NFTs", async function () {
 
     const NFT = await ethers.getContractFactory('NFT');
-    const nft = await NFT.deploy(testAddr);
+
+    // const nft = await NFT.deploy(testAddr);
+    const nft = await NFT.deploy();
+
     await nft.deployed();
-    const nftAddr = nft.address;
+    // const nftAddr = nft.address;
 
-    console.log(testAddr, nftAddr);
+    // console.log(testAddr, nftAddr);
 
+    const receiver = '0x9992847Cb19492673457f7f088Eb2d102F98aeCC';
     // test minting
-    await nft.mintToken('https-ipfs-t1');
-    await nft.mintToken('https-ipfs-t2');
-
+    await nft.mintToken(receiver, 'https-ipfs-t1');
+    await nft.mintToken(receiver, 'https-ipfs-t2');
 
   });
 });
