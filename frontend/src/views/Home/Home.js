@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
-import NftImg from '../assets/firefox_1fPtnUKIee.png';
-import Doodle from '../assets/image 5.png';
+import NftImg from '../../assets/firefox_1fPtnUKIee.png';
+import Doodle from '../../assets/image 5.png';
 
 const Home = () => {
     return (
@@ -11,7 +11,7 @@ const Home = () => {
                   <img src={NftImg} />
                   <h3 className={"mt-3"}>Voyager Pass</h3>
                   <p>A chance for newcomersto the space to own an NFT and learn about it free of any cost whatsoever</p>
-                  <Button variant="primary">Free</Button>
+                  <Button variant="primary" href="/voyagers">Free</Button>
               </Col>
               <Col>
                   <img src={NftImg} />
