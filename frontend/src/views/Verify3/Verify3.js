@@ -8,7 +8,7 @@ const Verify = () => {
     useEffect(() => {
         setTimeout(() => {
             navigate('/explore');
-        }, 5000);
+        }, 4000);
     }, []);
 
     return (
