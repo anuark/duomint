@@ -16,8 +16,7 @@ const ExploreAccess = () => {
                 <Col xs="8" className="text-center">
                     <h1 className="mt-5">Access</h1>
                     <div style={{padding: '50px', minHeight: '205px'}}>
-                      <h4>NFTs certify your ownership of a digital asset. Certain social media platforms will now even verify your ownership</h4>
-                      <h4>For now, let's view our own NFT</h4>
+                      <h4>NFTs can also be used as a token to access gated experiences. As a final step, use your NFT to access this exclusive Discord server.</h4>
                     </div>
                 </Col>
                 <Col></Col>
@@ -25,7 +24,7 @@ const ExploreAccess = () => {
             <Row>
                 <Col></Col>
                 <Col className="text-center">
-                    <Button variant="primary" href="/explore-ownership"><FaDiscord/> Access Discord Server</Button>
+                    <Button variant="primary" href="https://discord.gg/mP8vKKcF" target="_blank"><FaDiscord/> Access Discord Server</Button>
                 </Col>
                 <Col></Col>
             </Row>
