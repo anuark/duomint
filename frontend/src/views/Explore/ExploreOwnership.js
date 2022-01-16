@@ -16,7 +16,7 @@ const ExploreOwnership = () => {
                     <img src={Rec} />
                     </div>
                     <div style={{padding: '50px', minHeight: '205px'}}>
-                      <h4>NFTs certify your ownership of a digital asset. For example, anyone who views this NFT on a platform like Etherscan will be able to see it belongs to you.</h4>
+                      <h4>NFTs certify your ownership of a digital asset. For example, anyone who views this NFT on a platform like Opensea will be able to see it belongs to you.</h4>
                     </div>
                 </Col>
                 <Col></Col>
@@ -24,7 +24,7 @@ const ExploreOwnership = () => {
             <Row>
                 <Col></Col>
                 <Col className="text-center">
-                    <Button variant="outline-light" href="https://testnets.opensea.io/assets/0x652716673da8401dc9f34f0fa28751f21c39e547/59" target="_blank">View on Etherscan</Button>
+                    <Button variant="outline-light" href="https://testnets.opensea.io/assets/0x652716673da8401dc9f34f0fa28751f21c39e547/59" target="_blank">View on Opensea</Button>
                 </Col>
                 <Col></Col>
             </Row>
