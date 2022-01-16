@@ -26,7 +26,7 @@ function App() {
         <Routes>
            <Route path="/" element={<Home />} />
            <Route path="/voyagers" element={<VoyagerSignUp />} />
-           <Route path="/pilots" element={<Pilot />} />
+           <Route path="/pilots" element={<Pilot userAddress={userAddress} setUserAddress={setUserAddress}  />} />
            <Route path="/verify" element={<Verify />} />
            <Route path="/verify2" element={<Verify2 />} />
            <Route path="/verify3" element={<Verify3 />} />

@@ -11,6 +11,14 @@ const MetaMask = props => {
   const onboarding = useRef();
 
   useEffect(() => {
+    if (MetaMaskOnboarding.isMetaMaskInstalled()) {
+    window.ethereum
+      .request({ method: 'eth_requestAccounts' })
+      .then((newAccounts) => setAccounts(newAccounts));
+    }
+  }, []);
+
+  useEffect(() => {
     if (!onboarding.current) {
       onboarding.current = new MetaMaskOnboarding();
     }
@@ -20,6 +28,7 @@ const MetaMask = props => {
     if (MetaMaskOnboarding.isMetaMaskInstalled()) {
       if (accounts.length > 0) {
         setConnected(true);
+        setUserAddress(accounts[0]);
         onboarding.current.stopOnboarding();
       } else {
         setConnected(false);
