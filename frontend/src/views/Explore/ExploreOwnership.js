@@ -16,7 +16,7 @@ const ExploreOwnership = () => {
                 <Col xs="8" className="text-center">
                     <h1 className="mt-5">Ownership</h1>
                     <div style={{padding: '50px', minHeight: '205px'}}>
-                      <h4>NFTs certify your ownership of a digital asset. Certain social media platforms will now even verify your ownership</h4>
+                      <h4>NFTs certify your ownership of a digital asset. This is now certified by the Ethereum Blockchain. Everyone is able to read and verify that this is uniquely yours.</h4>
                       <h4>For now, let's view our own NFT</h4>
                     </div>
                 </Col>
@@ -25,7 +25,7 @@ const ExploreOwnership = () => {
             <Row>
                 <Col></Col>
                 <Col className="text-center">
-                    <Button variant="primary" href="/explore-ownership"><AiOutlineCloudUpload/> Upload your NFT to Twitter</Button>
+                    <Button variant="primary" href="https://testnets.opensea.io/assets/0x652716673da8401dc9f34f0fa28751f21c39e547/59" target="_blank"><AiOutlineCloudUpload/> View your NFT on Opensea</Button>
                 </Col>
                 <Col></Col>
             </Row>
@@ -40,3 +40,4 @@ const ExploreOwnership = () => {
 };
 
 export default ExploreOwnership;
+
