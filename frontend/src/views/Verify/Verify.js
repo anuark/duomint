@@ -26,12 +26,12 @@ const Verify = props => {
                   "Authorization": `Bearer ${process.env.TWITTER_TOKEN}`
                 }
             });
-            .then(res => {
-                return res.json();
-            })
-            .then(res => {
-                console.log(res, 'res');
-            });
+            // .then(res => {
+            //     return res.json();
+            // })
+            // .then(res => {
+            //     console.log(res, 'res');
+            // });
         });
     }, [twitterLink]);
 
