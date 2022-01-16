@@ -24,7 +24,7 @@ const Verify = () => {
               <Col></Col>
             </Row>
           </div>
-          <Button className="pt-1" variant="outline-primary">Verify</Button>
+          <Button className="pt-1" href="/verify2" variant="outline-primary">Verify</Button>
         </Fragment>
     );
 };
