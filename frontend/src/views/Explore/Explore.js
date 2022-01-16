@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Button, Row, Col } from 'react-bootstrap';
-import ReactPlayer from 'react-player'
+import Voyager from '../../assets/voyager.mp4';
+import Rec from '../../assets/Rectangle13.png';
 import './Explore.css';
 
 const Verify = () => {
@@ -10,7 +11,8 @@ const Verify = () => {
                 <Col></Col>
                 <Col className="text-center p-5">
                     <h3>Introducing, your Voyager Pass NFT!</h3>
-                    <ReactPlayer url='https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/' />
+                    <img src={Rec} />
+                    <video className='video' type='video/mp4' src={Voyager} autoPlay loop muted></video>
                     <h3>Let’s guide you through 3 things you can do with your NFT</h3>
                     <Button variant="outline-light" href="/explore-ownership">Explore</Button>
                 </Col>

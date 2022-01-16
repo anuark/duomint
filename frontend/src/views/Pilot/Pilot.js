@@ -18,7 +18,7 @@ const Pilot = props => {
 
     const passengers = [
     '0x1A4B691738C9c8Db8f2EDf0b9207f6acb24ADF07',
-    '0x37c5B029f9c3691B3d47cb024f84E5E257aEb0BB',
+    '0x5715DdBFd0b5f64285dABDE7F6Aed058F14FB78f',
     '0xD5d1bb95259Fe2c5a84da04D1Aa682C71A1B8C0E'
     ];
 
@@ -29,8 +29,8 @@ const Pilot = props => {
       const signer = provider.getSigner(0);
       const contract = new ethers.Contract( deployedNft, abi, signer);
       
-      const pilotTokenURI = 'https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/';
-      const passengerTokenURI = 'https://bafybeihm4x3trnqzs5nzk4h2mbaskdye2os3vy4cjbcllk56dxwp2bnj6m.ipfs.dweb.link/';
+      const pilotTokenURI = 'https://ipfs.io/ipfs/bafkreibjrybn6zg5ggdmpgyglcklijol4mxdb5y77mmfzlmqmu5n2ybfcm';
+      const passengerTokenURI = 'http://ipfs.io/ipfs/bafkreihvh5u5phaybexcdwtlpfqfkkn5a24ah4wo6ctciaj4seh7j3mssm';
       
       await contract.duoMint(passengers, pilotTokenURI, passengerTokenURI);
       console.log("DuoMint Successful!");

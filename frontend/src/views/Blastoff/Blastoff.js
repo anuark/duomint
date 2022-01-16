@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Button, Container } from 'react-bootstrap';
-import ReactPlayer from 'react-player'
 import Rec from '../../assets/Rectangle13.png';
+import Pilot from '../../assets/pilot.mp4';
 import './Blastoff.css';
 
 const Blastoff = props => {
@@ -13,7 +13,7 @@ const Blastoff = props => {
           <div className={"center"}>
           <img src={Rec} />
           </div>
-          <ReactPlayer url='https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/' />
+          <video className='video' type='video/mp4' src={Pilot} autoPlay loop muted></video>
           <p>Your contribution to the space is invaluable. We’ve create a discord server for others like yourself</p>
           <Button variant="outline-light">Access the Pilot Community Discord</Button>
         </Container>

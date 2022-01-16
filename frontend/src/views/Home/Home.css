@@ -1,15 +1,9 @@
-.player-wrapper {
-  width: auto;
-  height: auto;
-}
-
-.react-player {
-  /* padding-top: 56.25%; 
-  position: relative;  */
-  width: 100px;
-}
-
 .center {
   text-align: center;
   margin: auto;
+}
+
+.videohome {
+  width: 320px;
+  height: 320px;
 }

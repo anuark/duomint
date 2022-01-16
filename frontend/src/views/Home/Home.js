@@ -3,13 +3,14 @@ import { Row, Col, Button } from 'react-bootstrap';
 import Doodle from '../../assets/image 5.png';
 import Dog from '../../assets/image10.svg';
 import Rec from '../../assets/Rectangle13.png';
-import ReactPlayer from 'react-player'
+import Voyager from '../../assets/voyager.mp4';
+import Pilot from '../../assets/pilot.mp4';
 import './Home.css';
 
 const Home = () => {
     return (
         <Fragment>
-            <Row className={"mt-5"}>
+            <Row className={"mt-5 mb-5"}>
                 <Col><h1>An NFT for newcomers —100% free</h1></Col>
                 <Col>Crypto-natives can donate the gas fees to onboard newcomers <br/><br/>Helping grow the ecosystem and earning a reward along the way</Col>
             </Row>
@@ -17,21 +18,22 @@ const Home = () => {
             <img src={Rec} />
             </div>
 
-          <Row className={"mt-5"}>
+          <Row className={"mt-5 mb-5 center"}>
               <Col>
-                <div className='react-wrapper'><ReactPlayer className='react-player' url='https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/' /></div>
+              <video className='videohome' type='video/mp4' src={Voyager} autoPlay loop muted></video>
+
                   <h3 className={"mt-3"}>Voyager Pass</h3>
                   <p>Free for newcomers</p>
                   <Button variant="outline-light" href="/voyagers">Collect</Button>
               </Col>
               <Col>
-              <div className='react-wrapper'><ReactPlayer className='react-player' url='https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/' /></div>
+              <video className='videohome' type='video/mp4' src={Pilot} autoPlay loop muted></video>
                   <h3 className={"mt-3"}>Pilot Pass</h3>
                   <p>Sponsor gas fees & earn this reward</p>
                   <Button variant="outline-light" href="/pilots">Collect</Button>
               </Col>
           </Row>
-          <div className={"center"}>
+          <div className={"mt-3 center"}>
             <img src={Rec} />
           </div>
           <Row className={"mt-5"}>
