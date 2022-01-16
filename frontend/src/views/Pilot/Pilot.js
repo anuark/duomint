@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { ethers } from "ethers";
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Route, Navigate } from 'react-router-dom';
 import MetaMask from '../MetaMask.js';
 import './Pilot.css';
 
 const Pilot = props => {
     const {userAddress, setUserAddress } = props;
     const [i, setIterator] = useState(1);
+    const [minted, setMinted] = useState(false);
+
 
     const deployedNft ='0x652716673DA8401Dc9F34f0fA28751f21C39E547';
-    const provider = new ethers.providers.AlchemyProvider("rinkeby");
-    const contract = new ethers.Contract(deployedNft, abi, provider);
+    
+    const ethereum = window.ethereum;
+    const provider = new ethers.providers.Web3Provider(ethereum);
 
     const passengers = [
     '0x1A4B691738C9c8Db8f2EDf0b9207f6acb24ADF07',
@@ -23,17 +27,20 @@ const Pilot = props => {
 
     const mint = async () => {
 
+      const signer = provider.getSigner(0);
 
-        const pilotTokenURI = 'https://ipfs.io/ipfs/bafybeigshjvxylte7ujmymcgypyqrhm6fxugiuwt5krgrvctvmvvb6nrnu';
-        const passengerTokenURI = 'https://ipfs.io/ipfs/bafybeigshjvxylte7ujmymcgypyqrhm6fxugiuwt5krgrvctvmvvb6nrnu';
-        
-        await contract.duoMint(passengers, pilotTokenURI, passengerTokenURI);
-
-        console.log("DuoMint Successful!");
+      const contract = new ethers.Contract( deployedNft, abi, signer);  
+      const pilotTokenURI = 'https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/';
+      const passengerTokenURI = 'https://bafybeihm4x3trnqzs5nzk4h2mbaskdye2os3vy4cjbcllk56dxwp2bnj6m.ipfs.dweb.link/';
+      
+      await contract.duoMint(passengers, pilotTokenURI, passengerTokenURI);
+      console.log("DuoMint Successful!");
+      setMinted(true);
     }
 
     return (
         <Container className={'mt-5'} style={{textAlign:'center'}}>
+          {minted ? <Navigate to="/blastoff" /> : null}
             <MetaMask setUserAddress={setUserAddress} />
             <Row className={'mt-4'}>
                 <h4>How many passengers do you want to onboard?</h4>

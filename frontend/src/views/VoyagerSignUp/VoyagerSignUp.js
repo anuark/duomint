@@ -7,14 +7,8 @@ import './VoyagerSignUp.css';
 const VoyagerSignUp = props => {
     const {userAddress, setUserAddress } = props;
 
-
-
-    // const metamaskConnect = () => {
-    //     console.log('connecting');
-    // }
-
     return (
-        <Container className={'mt-5'}>
+        <Container className={'mt-5'} style={{textAlign:'center'}}>
             <MetaMask setUserAddress={setUserAddress} />
             {/* <Button className={"metamask-btn"} variant="outline-primary" onClick={metamaskConnect()}>Connect with Metamask</Button> */}
             <p className={"mt-4 text-center"}>Don't have one yet? <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en" target='_blank'>Create</a></p>

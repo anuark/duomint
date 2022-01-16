@@ -4,6 +4,7 @@ import './index.css';
 import Home from './views/Home/Home';
 import VoyagerSignUp from './views/VoyagerSignUp/VoyagerSignUp';
 import Pilot from './views/Pilot/Pilot';
+import Blastoff from './views/Blastoff/Blastoff';
 import Verify from './views/Verify/Verify';
 import Verify2 from './views/Verify2/Verify2';
 import Verify3 from './views/Verify3/Verify3';
@@ -25,9 +26,10 @@ function App() {
       <Container>
         <Routes>
            <Route path="/" element={<Home />} />
-           <Route path="/voyagers" element={<VoyagerSignUp />} />
            <Route path="/pilots" element={<Pilot userAddress={userAddress} setUserAddress={setUserAddress}  />} />
-           <Route path="/verify" element={<Verify userAddress={userAddress} />} />
+           <Route path="/blastoff" element={<Blastoff userAddress={userAddress} setUserAddress={setUserAddress}  />} />
+           <Route path="/voyagers" element={<VoyagerSignUp userAddress={userAddress} setUserAddress={setUserAddress} />} />
+           <Route path="/verify" element={<Verify  />} />
            <Route path="/verify2" element={<Verify2 />} />
            <Route path="/verify3" element={<Verify3 />} />
            <Route path="/explore" element={<Explore />} />
