@@ -15,11 +15,11 @@ const Verify = props => {
     const intentMsg = encodeURIComponent(`Verifying on Duomint! 🍃🍃 ${userAddress}`);
     console.log(intentMsg, 'intentMsg');
 
-    useEffect(() => {
+    const onClick = () => {
         console.log(process.env.TWITTER_TOKEN, 'twitter token');
-        formRef.current.onSubmit((ev) => {
-            const twitterId = parseTweetId(twitterLink);
+        formRef.current.submit((ev) => {
             ev.preventDefault();
+            const twitterId = parseTweetId(twitterLink);
             fetch(`https://api.twitter.com/2/tweets?ids=${twitterId}`, {
                 "method": "GET",
                 "headers": {
@@ -33,16 +33,17 @@ const Verify = props => {
             //     console.log(res, 'res');
             // });
         });
-    }, [twitterLink]);
+    };
 
     return (
         <Fragment>
+          <p>{userAddress}</p>
             <Row>
               <Col></Col>
               <Col xs="6 text-center mt-5">
-                <h3>We need to verify who you are</h3>
-                <h3>You can easily get verified<a href={`https://twitter.com/intent/tweet?text=${intentMsg}via=duomint`}>tweeting it</a></h3>
-                <h3>And then pasting the tweet link on the input below:</h3>
+                <h3>To verify your account,</h3>
+                <h3>Click: <a href={`https://twitter.com/intent/tweet?text=${intentMsg}via=duomint`} target='_blank'>Tweet Verification</a></h3>
+                <h3>Then, paste your tweet below:</h3>
                 <div className="text-center p-3">
                     <form ref={formRef}>
                     <InputGroup className="mb-3">

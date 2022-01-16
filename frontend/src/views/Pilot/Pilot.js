@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ethers } from "ethers";
 import { Button, Container, Row, Col } from 'react-bootstrap';
-import { Route, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import MetaMask from '../MetaMask.js';
 import './Pilot.css';
 
@@ -9,7 +9,6 @@ const Pilot = props => {
     const {userAddress, setUserAddress } = props;
     const [i, setIterator] = useState(1);
     const [minted, setMinted] = useState(false);
-
 
     const deployedNft ='0x652716673DA8401Dc9F34f0fA28751f21C39E547';
     
@@ -26,10 +25,9 @@ const Pilot = props => {
     const minus = () => { if (i > 1) setIterator(i-1); }
 
     const mint = async () => {
-
       const signer = provider.getSigner(0);
-
-      const contract = new ethers.Contract( deployedNft, abi, signer);  
+      const contract = new ethers.Contract( deployedNft, abi, signer);
+      
       const pilotTokenURI = 'https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/';
       const passengerTokenURI = 'https://bafybeihm4x3trnqzs5nzk4h2mbaskdye2os3vy4cjbcllk56dxwp2bnj6m.ipfs.dweb.link/';
       
