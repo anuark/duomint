@@ -4,6 +4,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import MetaMask from '../MetaMask.js';
 import Rec from '../../assets/Rectangle13.png';
 import './VoyagerSignUp.css';
+import MetaMask from '../MetaMask.js';
 
 const VoyagerSignUp = props => {
     const {userAddress, setUserAddress } = props;
