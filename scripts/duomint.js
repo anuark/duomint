@@ -10,8 +10,8 @@ const passengers = [
 async function main() {
   const nft = await hre.ethers.getContractAt('NFT2', deployedNft);
 
-  const signer0 = await ethers.provider.getSigner(0);
-  const nonce = await signer0.getTransactionCount();
+  // const signer0 = await ethers.provider.getSigner(0);
+  // const nonce = await signer0.getTransactionCount();
 
   const pilotTokenURI = 'https://ipfs.io/ipfs/bafybeigshjvxylte7ujmymcgypyqrhm6fxugiuwt5krgrvctvmvvb6nrnu';
   const passengerTokenURI = 'https://ipfs.io/ipfs/bafybeigshjvxylte7ujmymcgypyqrhm6fxugiuwt5krgrvctvmvvb6nrnu';

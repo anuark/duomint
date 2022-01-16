@@ -17,7 +17,7 @@ const Home = () => {
                   <img src={NftImg} />
                   <h3 className={"mt-3"}>Pilot Pass</h3>
                   <p >Mark yourself in history as one of the pioneers in the space that helped onboard the world to web3</p>
-                  <Button variant="primary">Starting at 0.04 ETH</Button>
+                  <Button variant="primary" href="/pilots">Starting at 0.04 ETH</Button>
               </Col>
           </Row>
 
