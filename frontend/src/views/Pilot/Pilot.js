@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { Navigate } from 'react-router-dom';
 import Rec from '../../assets/Rectangle13.png';
+import Twitters from '../../assets/TwitterProfiles.mp4';
 import MetaMask from '../MetaMask.js';
 import './Pilot.css';
 
@@ -61,7 +62,7 @@ const Pilot = props => {
             </Row>
             <Row className={'mt-5'}>
             <p>There 43 eager newcomers waiting in the queue</p>
-            queue
+            <video className='videotwit' type='video/mp4' src={Twitters} autoPlay loop muted></video>
             </Row>
         </Container>
     );
