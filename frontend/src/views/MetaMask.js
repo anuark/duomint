@@ -49,11 +49,14 @@ const MetaMask = props => {
   };
 
   return (
+    <div>
+      <p id='msgSender'>{accounts[0]}</p>
       <Button 
       bg="light" variant="light" 
       className={`me-3 ${connected ? 'text-muted' : 'text-primary pe-auto'}`} 
       onClick={onClick}><BsFillLightningChargeFill />{buttonText}
       </Button>
+    </div>
   );
 };
 
