@@ -9,10 +9,10 @@ const VoyagerSignUp = () => {
     }
 
     return (
-        <Container>
+        <Fragment>
             <Button className={"metamask-btn"} variant="outline-primary" onClick={metamaskConnect()}>Connect with Metamask</Button>
             <p className={"mt-2 text-center"}>Don't have one yet? <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">Create</a></p>
-        </Container>
+        </Fragment>
     );
 }
 

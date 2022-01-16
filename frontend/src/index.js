@@ -5,6 +5,7 @@ import App from './App';
 import Home from './views/Home/Home';
 import VoyagerSignUp from './views/VoyagerSignUp/VoyagerSignUp';
 import Pilot from './views/Pilot/Pilot';
+import Verify from './views/Verify/Verify';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './common/Header';
@@ -16,9 +17,10 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
+          <Route path="/voyagers" element={<VoyagerSignUp />} />
+          <Route path="/pilots" element={<Pilot />} />
+          <Route path="/verify" element={<Verify />} />
         </Route>
-        <Route path="/voyagers" element={<VoyagerSignUp />} />
-        <Route path="/pilots" element={<Pilot />} />
       </Routes>
     </BrowserRouter>,
   </React.StrictMode>,
