@@ -1,27 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import Home from './views/Home/Home';
-import VoyagerSignUp from './views/VoyagerSignUp/VoyagerSignUp';
-import Pilot from './views/Pilot/Pilot';
-import Verify from './views/Verify/Verify';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './common/Header';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="/voyagers" element={<VoyagerSignUp />} />
-          <Route path="/pilots" element={<Pilot />} />
-          <Route path="/verify" element={<Verify />} />
-        </Route>
-      </Routes>
+        <App />
     </BrowserRouter>,
   </React.StrictMode>,
   document.getElementById('root')
