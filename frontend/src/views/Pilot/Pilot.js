@@ -1,6 +1,5 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ethers } from "ethers";
-import { Link } from 'react-router-dom';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import MetaMask from '../MetaMask.js';
 import './Pilot.css';
@@ -11,7 +10,7 @@ const Pilot = props => {
 
     const deployedNft ='0x652716673DA8401Dc9F34f0fA28751f21C39E547';
     const provider = new ethers.providers.AlchemyProvider("rinkeby");
-    const contract = new ethers.Contract( deployedNft, abi, provider );
+    const contract = new ethers.Contract(deployedNft, abi, provider);
 
     const passengers = [
     '0x1A4B691738C9c8Db8f2EDf0b9207f6acb24ADF07',
@@ -34,9 +33,9 @@ const Pilot = props => {
     }
 
     return (
-        <Container className={'mt-5'}>
+        <Container className={'mt-5'} style={{textAlign:'center'}}>
             <MetaMask setUserAddress={setUserAddress} />
-            <Row className={'mt-5'}>
+            <Row className={'mt-4'}>
                 <h4>How many passengers do you want to onboard?</h4>
                 <Col className="pull-right">
                     <Button className="float-end" variant="primary" onClick={minus}>-</Button>
@@ -47,7 +46,7 @@ const Pilot = props => {
                 </Col>
             </Row>
             <Row className={'mt-5'}>
-                <Col>
+                <Col >
                 <Button className="" variant="primary" onClick={mint}>Mint NFT Collection</Button>
                 </Col>
             </Row>
