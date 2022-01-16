@@ -26,7 +26,7 @@ const ExploreUtility = () => {
             <Row>
                 <Col></Col>
                 <Col className="text-center">
-                    <Button variant="outline-light" href="/explore-ownership">Open in OnCyber</Button>
+                    <Button variant="outline-light" href="https://spatial.io/" target="_blank">Open in OnCyber</Button>
                 </Col>
                 <Col></Col>
             </Row>
@@ -41,3 +41,4 @@ const ExploreUtility = () => {
 };
 
 export default ExploreUtility;
+

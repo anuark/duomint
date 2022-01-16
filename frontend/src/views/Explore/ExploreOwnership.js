@@ -24,7 +24,7 @@ const ExploreOwnership = () => {
             <Row>
                 <Col></Col>
                 <Col className="text-center">
-                    <Button variant="outline-light" href="/explore-ownership">View on Etherscan</Button>
+                    <Button variant="outline-light" href="https://testnets.opensea.io/assets/0x652716673da8401dc9f34f0fa28751f21c39e547/59" target="_blank">View on Etherscan</Button>
                 </Col>
                 <Col></Col>
             </Row>
@@ -39,3 +39,4 @@ const ExploreOwnership = () => {
 };
 
 export default ExploreOwnership;
+

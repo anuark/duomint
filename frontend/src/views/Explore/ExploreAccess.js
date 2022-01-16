@@ -24,7 +24,7 @@ const ExploreAccess = () => {
             <Row>
                 <Col></Col>
                 <Col className="text-center">
-                    <Button variant="outline-light" href="/explore-ownership"> Access Discord Server</Button>
+                    <Button variant="outline-light" href="https://discord.gg/mP8vKKcF" target="_blank">Access Discord Server</Button>
                 </Col>
                 <Col></Col>
             </Row>
