@@ -8,9 +8,15 @@ import NftImg from '../../assets/nft-voyager.png';
 const Verify = () => {
     return (
         <Fragment>
-            <img src={NftImg} />
-            <h3>You can do a lot with your NFT, let us show you!</h3>
-            <Button variant="primary" href="/explore-ownership">Explore</Button>
+            <Row>
+                <Col></Col>
+                <Col className="text-center p-5">
+                    <img src={NftImg} />
+                    <h3>You can do a lot with your NFT, let us show you!</h3>
+                    <Button variant="primary" href="/explore-ownership">Explore</Button>
+                </Col>
+                <Col></Col>
+            </Row>
         </Fragment>
     );
 };
