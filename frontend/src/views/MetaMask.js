@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Button } from 'react-bootstrap';
-import { BsFillLightningChargeFill } from 'react-icons/bs';
 import MetaMaskOnboarding from '@metamask/onboarding';
 
 const MetaMask = props => {
@@ -42,7 +41,7 @@ const MetaMask = props => {
         setButtonText('Connected');
         onboarding.current.stopOnboarding();
       } else {
-        setButtonText('Connect MetaMask Wallet');
+        setButtonText('Connect with MetaMask');
       }
     }
   }, [accounts]);
@@ -61,9 +60,9 @@ const MetaMask = props => {
     <div>
       <p id='msgSender'>{accounts[0]}</p>
       <Button 
-      bg="light" variant="light" 
-      className={`me-3 ${connected ? 'text-muted' : 'text-primary pe-auto'}`} 
-      onClick={onClick}><BsFillLightningChargeFill />{buttonText}
+      bg="light" variant="outline-light" 
+      className={`me-3 ${connected ? 'text-muted' : 'text-light pe-auto'}`} 
+      onClick={onClick}>{buttonText}
       </Button>
     </div>
   );

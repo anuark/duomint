@@ -13,8 +13,8 @@ const Verify = () => {
 
     return (
         <Fragment>
-          <h3 className="text-info mt-5">Thanks for verifying! We've saved your spot in line</h3>
-          <h3 className="text-info mt-5">Keep an eye out -- we'll be tweeting you with a link when your NFT is minted</h3>
+          <h3 className="text-info mt-5">All done for now! We've saved <br/> your spot in line</h3>
+          <hr/>
         </Fragment>
     );
 };

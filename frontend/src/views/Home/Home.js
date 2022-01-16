@@ -1,44 +1,64 @@
 import React, { Fragment } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
-import NftImg from '../../assets/firefox_1fPtnUKIee.png';
 import Doodle from '../../assets/image 5.png';
+import Dog from '../../assets/image10.svg';
+import Rec from '../../assets/Rectangle13.png';
+import ReactPlayer from 'react-player'
+import './Home.css';
 
 const Home = () => {
     return (
         <Fragment>
+            <Row className={"mt-5"}>
+                <Col><h1>An NFT for newcomers —100% free</h1></Col>
+                <Col>Crypto-natives can donate the gas fees to onboard newcomers <br/><br/>Helping grow the ecosystem and earning a reward along the way</Col>
+            </Row>
+            <div className={"center"}>
+            <img src={Rec} />
+            </div>
+
           <Row className={"mt-5"}>
               <Col>
-                  <img src={NftImg} />
+                <div className='react-wrapper'><ReactPlayer className='react-player' url='https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/' /></div>
                   <h3 className={"mt-3"}>Voyager Pass</h3>
-                  <p>A chance for newcomersto the space to own an NFT and learn about it free of any cost whatsoever</p>
-                  <Button variant="primary" href="/voyagers">Free</Button>
+                  <p>Free for newcomers</p>
+                  <Button variant="outline-light" href="/voyagers">Collect</Button>
               </Col>
               <Col>
-                  <img src={NftImg} />
+              <div className='react-wrapper'><ReactPlayer className='react-player' url='https://bafybeig6sorqkttqmdbzjf32zjn5nkcf6jefhmwc2735poplix7psdqd2u.ipfs.dweb.link/' /></div>
                   <h3 className={"mt-3"}>Pilot Pass</h3>
-                  <p >Mark yourself in history as one of the pioneers in the space that helped onboard the world to web3</p>
-                  <Button variant="primary" href="/pilots">Starting at 0.04 ETH</Button>
+                  <p>Sponsor gas fees & earn this reward</p>
+                  <Button variant="outline-light" href="/pilots">Collect</Button>
               </Col>
           </Row>
-
+          <div className={"center"}>
+            <img src={Rec} />
+          </div>
           <Row className={"mt-5"}>
-              <h1>438</h1>
-              <p>People onboarded so far</p>
+              <p className={"center"}>New in Summer 2022</p>
+              <h1 className={"center"}>See highlights from the people you’ve onboarded</h1>
           </Row>
 
           <Row className={"mt-5"}>
-              <h1>Launch Project Wrapped</h1>
-              <p>See Highlights from the people you've onboarded</p>
-
+              <h3 className={"center"}>Cool things from the 9 wallets you onboarded</h3>
               <Row className={"mt-5"}>
                   <Col>
                     <img src={Doodle} />
                   </Col>
                   <Col>
-                      <h1 className={"mt-5"}>7 Doodles</h1>
-                      <p>Were minted across 3 of your voyagers this year</p>
+                      <h3 className={"mt-5"}>7 Doodles</h3>
+                      <p>Minted across 3 of the wallets you brought to the space</p>
                   </Col>
               </Row>
+              <Row className={"mt-5"}>
+                <Col>
+                      <h3 className={"mt-5"}>3 Shiba Inu Millionaires</h3>
+                      <p>Got their start minting an NFT that you funded</p>
+                </Col>
+                 <Col>
+                    <img src={Dog} />
+                </Col>
+                  </Row>
           </Row>
         </Fragment>
     );

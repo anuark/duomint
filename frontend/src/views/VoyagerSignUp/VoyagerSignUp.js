@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import MetaMask from '../MetaMask.js';
+import Rec from '../../assets/Rectangle13.png';
 import './VoyagerSignUp.css';
 
 const VoyagerSignUp = props => {
@@ -14,7 +15,10 @@ const VoyagerSignUp = props => {
 
     return (
         <Container className={'mt-5'} style={{textAlign:'center'}}>
-            
+            <h4>Let's Start!</h4>
+            <div className={"center"}>
+            <img src={Rec} />
+            </div>
             <MetaMask setUserAddress={setUserAddress} />
             {!userAddress ?
             <p className={"mt-4 text-center"}>Don't have one yet? 
@@ -23,7 +27,7 @@ const VoyagerSignUp = props => {
             : 
             <Row className={'mt-5'}>
                 <Col >
-                <Link to='/verify'><Button variant="primary" onClick={verify}>Verify with Twitter</Button></Link>
+                <Link to='/verify'><Button variant="outline-light" onClick={verify}>Verify with Twitter</Button></Link>
                 </Col>
             </Row>
             }

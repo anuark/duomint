@@ -17,5 +17,6 @@ const Verify = () => {
         </Fragment>
     );
 };
+// remove this from the flow
 
 export default Verify;

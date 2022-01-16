@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ethers } from "ethers";
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { Navigate } from 'react-router-dom';
+import Rec from '../../assets/Rectangle13.png';
 import MetaMask from '../MetaMask.js';
 import './Pilot.css';
 
@@ -42,18 +43,25 @@ const Pilot = props => {
             <MetaMask setUserAddress={setUserAddress} />
             <Row className={'mt-4'}>
                 <h4>How many passengers do you want to onboard?</h4>
+            <div className={"center"}>
+            <img src={Rec} />
+            </div>
                 <Col className="pull-right">
-                    <Button className="float-end" variant="primary" onClick={minus}>-</Button>
+                    <Button className="float-end" variant="outline-light" onClick={minus}>-</Button>
                 </Col>
                 <Col xs="1" lg="1"><h3>{i}</h3></Col>
                 <Col>
-                    <Button className="float-start" variant="primary" onClick={plus}>+</Button>
+                    <Button className="float-start" variant="outline-light" onClick={plus}>+</Button>
                 </Col>
             </Row>
             <Row className={'mt-5'}>
                 <Col >
-                <Button className="" variant="primary" onClick={mint}>Mint NFT Collection</Button>
+                <Button className="" variant="outline-light" onClick={mint}>Mint NFT Collection</Button>
                 </Col>
+            </Row>
+            <Row className={'mt-5'}>
+            <p>There 43 eager newcomers waiting in the queue</p>
+            queue
             </Row>
         </Container>
     );
