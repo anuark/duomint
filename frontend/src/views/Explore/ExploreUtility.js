@@ -15,9 +15,9 @@ const ExploreUtility = () => {
             <Row>
                 <Col></Col>
                 <Col xs="8" className="text-center">
-                    <h1 className="mt-5">Utility</h1>
+                    <h1 className="mt-5">Portability</h1>
                     <div style={{padding: '50px', minHeight: '205px'}}>
-                      <h4>Certain NFTs will have some utility on other apps. Trying bringing your NFT into this Metaverse</h4>
+                      <h4>As the NFT is now yours you can bring it with you anywhere in web3! Try bringing your NFT into a Metaverse art gallery</h4>
                     </div>
                 </Col>
                 <Col></Col>
@@ -26,7 +26,7 @@ const ExploreUtility = () => {
             <Row>
                 <Col></Col>
                 <Col className="text-center">
-                    <Button variant="primary" href="/explore-ownership"><FaRegCircle/>&nbsp;&nbsp;&nbsp; Open in OnCyber</Button>
+                    <Button variant="primary" href="https://spatial.io/" target="_blank"><FaRegCircle/>&nbsp;&nbsp;&nbsp; Open in Spatial</Button>
                 </Col>
                 <Col></Col>
             </Row>
@@ -41,3 +41,4 @@ const ExploreUtility = () => {
 };
 
 export default ExploreUtility;
+
